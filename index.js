@@ -212,35 +212,7 @@ client.on('guildMemberAdd', member => {
  member.guild.channels.get('767674285345996821').send(hello);
 });
 
-tempChannels.registerChannel("826459642167033897", {
-  childCategory: "826459256735793153",
-  childAutoDeleteIfEmpty: true,
-  childAutoDeleteIfOwnerLeaves: true,
-  childMaxUsers: 10,
-  childFormat: (member, count) => `#${count} | Stream`
-});
 
-tempChannels.registerChannel("768054579421118495", {
-  childCategory: "768051247923855380",
-  childAutoDeleteIfEmpty: true,
-  childAutoDeleteIfOwnerLeaves: true,
-  childMaxUsers: 5,
-  childFormat: (member, count) => `#${count} | Chill`
-});
-
-tempChannels.registerChannel("826740190508482590", {
-  childCategory: "826460472151769098",
-  childAutoDeleteIfEmpty: true,
-  childAutoDeleteIfOwnerLeaves: true, 
-  childMaxUsers: 10,
-  childFormat: (member, count) => `#${count} | Rap `
-});
-
-tempChannels.on("childCreate", (member, channel, parentChannel) => {
-  console.log(member); // The member who created the new channel
-  console.log(channel); // The channel which was created
-  console.log(parentChannel); // The channel the member joined to create the new channel
-});
 
 client.on('message', async message => {
 
@@ -277,6 +249,8 @@ client.on('message', (message) => {
       }
    }
 });
+
+
 
 // Invitation : https://discord.com/api/oauth2/authorize?client_id=754274449649565767&permissions=8&scope=bot
 
