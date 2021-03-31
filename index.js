@@ -2,8 +2,6 @@ const { Client, RichEmbed, bot } = require("discord.js");
 const client = new Client({
   disableEveryone: true
 })
-const TempChannels = require("discord-temp-channels");
-const tempChannels = new TempChannels(client);
 const enmap = require('enmap');
 const Discord = require('discord.js');
 const {token, prefix} = require('./config.json');
